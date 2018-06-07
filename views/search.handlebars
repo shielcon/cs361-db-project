@@ -1,0 +1,26 @@
+<h3>services:</h3>
+<table>
+    <td><a href = "/services/1">Anonymizing Use</a></td>
+    <td><a href = "/services/2">Securing Browser</a></td>
+    <td><a href = "/services/3">Securing Emails</a></td>
+</table>
+<table>
+    <thead>
+        <th>Service</th>
+        <th>Link</th>
+    </thead>
+    <tbody>
+        {{#each service}}
+        <tr>
+            <td><a href = {{link}}>{{name}}</a></td>
+            <td><button><a href="/coffees/{{id}}">Update</a></button></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+<h3>Search Guides</h3>
+<form id="searchguides" action="/search" method="post">
+        Search: <input type="text" name="name">
+        <input class="submit" type ="submit" value="Submit">
+</form>
